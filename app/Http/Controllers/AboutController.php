@@ -6,8 +6,15 @@ use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
+    
     public function about()
     {
-        return view('about');
+        $foto = [
+            'foto-visi-misi' => 'al.png',
+            'foto-1' => 'al.png',
+            'foto-2' => 'al.png',
+            'foto-3' => 'al.png',
+        ];
+         return view('about', compact('foto')) ;
     }
 }
