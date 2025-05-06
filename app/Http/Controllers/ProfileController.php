@@ -11,9 +11,9 @@ class ProfileController extends Controller
         $profile = [
             'name' => 'Dewi Syafina',
             'email' => 'dewisyafinaaa118@gmail.com',
-            'bio' => 'Murid Marapthon',
-            'profile_picture' => 'al.png',
-            'skills' => ['Memasak']
+            'bio' => 'Murid Skansay [SMK N 1 Sayung]',
+            'profile_picture' => 'al-removebg-preview.png',
+            'skills' => ['Memasak', 'Coding (masih belajar)']
         ];
             return view('profile', compact('profile'));
     }

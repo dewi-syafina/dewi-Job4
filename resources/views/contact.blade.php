@@ -3,10 +3,95 @@
 @section('title', 'Contact - MyApp')
 
 @section('content')
-<div class="container my-5">
-    <h1 class="text-center mb-4">Hubungi Kami</h1>
+<style>
+    /* Contact Page Styles */
+    .contact-container {
+        background-color: #eaf7e3; /* Background hijau cerah */
+        padding: 60px 0;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .contact-container h1 {
+        font-size: 40px;
+        color: #2d6a4f; /* Warna hijau lebih gelap untuk judul */
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .contact-container form {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-container .form-label {
+        color: #2d6a4f;
+        font-weight: bold;
+    }
+
+    .contact-container .form-control {
+        border-radius: 8px;
+        border: 1px solid #d1e7dd;
+        padding: 12px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .contact-container .form-check-input {
+        margin-top: 8px;
+    }
+
+    .contact-container .form-check-label {
+        font-size: 16px;
+        color: #333;
+    }
+
+    .contact-container .btn-primary {
+        background-color: #52b788; /* Hijau cerah */
+        border-color: #52b788;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .contact-container .btn-primary:hover {
+        background-color: #2d6a4f; /* Hijau gelap saat hover */
+        border-color: #2d6a4f;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+        .contact-container h1 {
+            font-size: 32px;
+        }
+
+        .contact-container .form-control,
+        .contact-container .form-select {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        .contact-container .btn-primary {
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+
+</style>
+
+<div class="container contact-container my-5">
+    <h1>Hubungi Saya</h1>
     <form action="#" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_token" value="Jt50D1gPVnITk169RmMRH4gKpgArQb2Kj81bMGkM" autocomplete="off">        <!-- Input Text: Nama Lengkap -->
+        <input type="hidden" name="_token" value="Jt50D1gPVnITk169RmMRH4gKpgArQb2Kj81bMGkM" autocomplete="off"> 
+
+        <!-- Input Text: Nama Lengkap -->
         <div class="mb-3">
             <label for="name" class="form-label">Nama Lengkap</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required="">
@@ -70,4 +155,5 @@
         <button type="submit" class="btn btn-primary">Kirim Pesan</button>
     </form>
 </div>
+
 @endsection
